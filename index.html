@@ -5,17 +5,17 @@
   <title>הויזואליזציה הראשונה שלי</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-      color: #2f2f2f;
-      direction: rtl;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #2c3e50;
     }
 
     header {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(to right, #00796b, #004d40);
       color: white;
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
@@ -25,134 +25,138 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
 
     h2 {
-      color: #203a43;
-      font-size: 1.8rem;
+      color: #00695c;
+      border-bottom: 2px solid #b2dfdb;
+      padding-bottom: 5px;
       margin-top: 40px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
     }
 
     p, ul {
-      font-size: 1.1rem;
-      line-height: 1.9;
+      font-size: 1.2rem;
+      line-height: 1.8;
     }
 
     ul {
-      list-style-type: disc;
+      list-style-type: square;
       padding-right: 20px;
     }
 
     .button-group {
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .button {
-      background-color: #1abc9c;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      margin: 8px;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
       display: inline-block;
+      background-color: #009688;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 10px 0 0;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
 
     .button:hover {
-      background-color: #16a085;
+      background-color: #00796b;
+    }
+
+    .viz-container {
+      margin-top: 50px;
+      border: 2px solid #009688;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #f1f8f9;
     }
 
     footer {
+      margin-top: 60px;
       text-align: center;
       padding: 20px;
-      color: #666;
-      background-color: #eaeaea;
-      margin-top: 60px;
+      background-color: #e0f2f1;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>הויזואליזציה הראשונה שלי</h1>
-</header>
+  <header>
+    <h1>הויזואליזציה הראשונה שלי</h1>
+  </header>
 
-<div class="container">
-  <h2>על הפרויקט</h2>
-  <p>
-    פרויקט אישי שאפתני שנבנה באמצעות Tableau Public, המציג ניתוח נתונים בצורה גרפית ואינטראקטיבית. 
-    כאן תמצאו תובנות חדשות על תחבורה ציבורית בישראל בעזרת גרפים, פילוחים ומפות אינטראקטיביות.
-  </p>
+  <div class="container">
+    <h2>אודות הפרויקט</h2>
+    <p>
+      זהו פרויקט אישי וחדשני שנבנה בפלטפורמת Tableau Public, בו ביצעתי ניתוח מתקדם של נתונים בתחום התחבורה הציבורית בישראל.
+      מטרת הפרויקט היא להציג מגמות, תובנות ונתונים בצורה אינטראקטיבית, ויזואלית ומובנת לכל.
+    </p>
 
-  <h2>אז מה יש לנו כאן?</h2>
-  <ul>
-    <li>מפת חום של זמני המתנה</li>
-    <li>פילוח לפי סוגי תחבורה ואזורים גיאוגרפיים</li>
-    <li>מגמות לאורך זמן עם ניתוח עומק</li>
-  </ul>
+    <h2>מה כלול בדשבורד?</h2>
+    <ul>
+      <li>מפת חום של זמני הגעה</li>
+      <li>פילוחים לפי ערים, שעות וימי השבוע</li>
+      <li>השוואה בין אמצעי תחבורה שונים</li>
+      <li>גרפים המציגים מגמות שנתיות</li>
+    </ul>
 
-  <div class="button-group">
-    <a href="#viz" class="button">גש לדשבורד</a>
-    <a href="https://public.tableau.com/app/profile/" target="_blank" class="button">לטאבלו שלי</a>
-    <a href="mailto:you@example.com" class="button">צור קשר</a>
+    <div class="button-group">
+      <a href="#dashboard" class="button">מעבר לדשבורד</a>
+      <a href="https://public.tableau.com/app/profile/" target="_blank" class="button">לביקור בפרופיל שלי</a>
+      <a href="mailto:your.email@example.com" class="button">צור קשר</a>
+    </div>
+
+    <div class="viz-container" id="dashboard">
+      <!-- Embedded Tableau Dashboard -->
+      <div class='tableauPlaceholder' id='viz1745235852229' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Fi/FirstProject_17449030280760/Dashboard1/1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='FirstProject_17449030280760/Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Fi/FirstProject_17449030280760/Dashboard1/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='he-IL' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1745235852229');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = '100%';
+          vizElement.style.minHeight = '687px';
+          vizElement.style.maxHeight = '887px';
+          vizElement.style.height = (divElement.offsetWidth * 0.65) + 'px';
+        } else {
+          vizElement.style.width = '100%';
+          vizElement.style.height = '1227px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div>
   </div>
 
-  <h2 id="viz">הדשבורד שלי</h2>
-
-  <!-- Embed Tableau Viz -->
-  <div class='tableauPlaceholder' id='viz1745235502414' style='position: relative'>
-    <noscript>
-      <a href='#'>
-        <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Fi/FirstProject_17449030280760/Dashboard1/1_rss.png' style='border: none' />
-      </a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-      <param name='embed_code_version' value='3' />
-      <param name='site_root' value='' />
-      <param name='name' value='FirstProject_17449030280760/Dashboard1' />
-      <param name='tabs' value='no' />
-      <param name='toolbar' value='yes' />
-      <param name='static_image' value='https://public.tableau.com/static/images/Fi/FirstProject_17449030280760/Dashboard1/1.png' />
-      <param name='animate_transition' value='yes' />
-      <param name='display_static_image' value='yes' />
-      <param name='display_spinner' value='yes' />
-      <param name='display_overlay' value='yes' />
-      <param name='display_count' value='yes' />
-      <param name='language' value='he-IL' />
-    </object>
-  </div>
-  <script type='text/javascript'>
-    var divElement = document.getElementById('viz1745235502414');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    if (divElement.offsetWidth > 800) {
-      vizElement.style.width = '100%';
-      vizElement.style.minHeight = '700px';
-      vizElement.style.maxHeight = '1000px';
-      vizElement.style.height = (divElement.offsetWidth * 0.65) + 'px';
-    } else {
-      vizElement.style.width = '100%';
-      vizElement.style.height = '1200px';
-    }
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  </script>
-
-</div>
-
-<footer>
-  © כל הזכויות שמורות | ניתוחים עם טוויסט וסטייל 🧠📊
-</footer>
+  <footer>
+    © כל הזכויות שמורות | פרויקט ויזואליזציה ב־Tableau עם סטייל 🎨📊
+  </footer>
 
 </body>
 </html>
