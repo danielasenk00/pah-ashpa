@@ -6,39 +6,67 @@
     <title>הוויזואליזציה הראשונה שלי</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px; /* מרווח עליון כדי לפנות מקום לכותרת הקבועה */
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            width: 80%;
+            max-width: 960px;
         }
         h1, h2 {
             color: #007bff;
             text-align: center;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
+        h2 {
+            color: #28a745;
+            margin-top: 25px;
+        }
         .project-details {
-            line-height: 1.6;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        .project-details ul {
+            padding-left: 20px;
+            list-style-type: disc;
         }
         .button-container {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
         }
         .button {
             background-color: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
-            margin: 5px;
+            font-size: 18px;
+            margin: 10px;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
         .button:hover {
             background-color: #1e7e34;
@@ -46,55 +74,54 @@
         .tableau-viz {
             width: 100%;
             height: 600px; /* התאם גובה לפי הצורך */
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: none;
+            border-radius: 8px;
+            overflow: hidden; /* מסתיר גלילה פנימית אם קיימת */
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>הוויזואליזציה הראשונה שלי</h1>
+    </header>
 
-        <div class="project-details">
-            <h2>סקירה כללית של הפרויקט</h2>
-            <p>זהו הפרויקט הראשון והשאפתני שלי ב-Tableau, שמטרתו להציג נתונים בצורה ויזואלית ואינטראקטיבית. הפרויקט מתמקד בניתוח נתוני מכירות שנתיים של חברת "אלפא טק" ומאפשר למשתמשים לקבל תובנות מעמיקות לגבי מגמות מכירה, ביצועי מוצרים ואזורים גיאוגרפיים שונים.</p>
+    <div class="container">
+        <h2>סקירה כללית של הפרויקט</h2>
+        <p class="project-details">זהו הפרויקט הראשון והמרגש שלי ב-Tableau, שמטרתו להפוך נתונים מורכבים לתובנות ויזואליות ברורות ונגישות. בפרויקט זה, התמקדתי בניתוח מעמיק של נתוני מכירות שנתיים עבור חברת "אלפא סולושנס". המטרה הייתה ליצור דשבורד אינטראקטיבי שיאפשר לצוות העסקי לקבל החלטות מושכלות יותר על סמך מגמות מכירה, ביצועי מוצרים מגוונים ופילוח גיאוגרפי.</p>
 
-            <h2>מטרות הפרויקט</h2>
-            <ul>
-                <li>הצגת נתוני מכירות בצורה ברורה ונגישה.</li>
-                <li>זיהוי מגמות צמיחה וירידה במכירות לאורך זמן.</li>
-                <li>השוואה בין ביצועי קטגוריות מוצרים שונות.</li>
-                <li>הבנת תרומתם של אזורים שונים לסך המכירות.</li>
-                <li>יצירת דשבורד אינטראקטיבי המאפשר חקירת נתונים עצמאית.</li>
-            </ul>
+        <h2>מטרות הפרויקט העיקריות</h2>
+        <ul class="project-details">
+            <li><strong>המחשת מגמות מכירה לאורך זמן:</strong> זיהוי עונתיות וצמיחה.</li>
+            <li><strong>השוואת ביצועי מוצרים:</strong> הבנת אילו מוצרים מובילים ואילו טעונים שיפור.</li>
+            <li><strong>ניתוח מכירות לפי אזורים:</strong> איתור אזורים חזקים וחלשים.</li>
+            <li><strong>יצירת דשבורד דינמי:</strong> אפשרות למשתמשים לסנן ולחקור נתונים באופן עצמאי.</li>
+        </ul>
 
-            <h2>נתונים מרכזיים</h2>
-            <p>הוויזואליזציה כוללת נתונים על:</p>
-            <ul>
-                <li><strong>סך מכירות שנתי:</strong> 1,500,000 ₪</li>
-                <li><strong>המוצר הנמכר ביותר:</strong> "מחשב נייד דגם X"</li>
-                <li><strong>האזור עם המכירות הגבוהות ביותר:</strong> מרכז</li>
-                <li><strong>גידול שנתי ממוצע:</strong> 8%</li>
-            </ul>
+        <h2>תובנות מרכזיות מהנתונים</h2>
+        <p class="project-details">מניתוח הנתונים עולה כי:</p>
+        <ul class="project-details">
+            <li>סך המכירות השנתי הגיע ל-2,350,000 ₪, עם גידול של 12% לעומת השנה הקודמת.</li>
+            <li>קו המוצרים "פרו" הראה את הביצועים הטובים ביותר, ותורם כ-45% מסך המכירות.</li>
+            <li>אזור המרכז ממשיך להיות האזור עם נפח המכירות הגבוה ביותר, אך אזור הדרום הראה את קצב הצמיחה המהיר ביותר.</li>
+        </ul>
 
-            <h2>אינטראקטיביות</h2>
-            <p>הדשבורד ב-Tableau מאפשר לכם:</p>
-            <ul>
-                <li>לסנן נתונים לפי שנה, מוצר ואזור.</li>
-                <li>לבחור תקופות זמן ספציפיות כדי לראות מגמות.</li>
-                <li>להשתמש בכלי רחף כדי לקבל פרטים נוספים על נקודות מידע.</li>
-            </ul>
-        </div>
+        <h2>אינטראקטיביות בדשבורד</h2>
+        <p class="project-details">הדשבורד המוטמע מאפשר לכם:</p>
+        <ul class="project-details">
+            <li>לסנן את הנתונים לפי שנה, רבעון, קטגוריית מוצר ואזור גיאוגרפי.</li>
+            <li>להשתמש בכלי ה"רחף" כדי לקבל מידע מפורט על כל נקודת נתונים.</li>
+            <li>לבחור חלקים ספציפיים בוויזואליזציה כדי לראות נתונים קשורים.</li>
+        </ul>
 
         <div class="button-container">
-            <a href="#" class="button">ניתוח מפורט</a>
-            <a href="#" class="button">הורדת נתונים</a>
-            <a href="#" class="button">צור קשר</a>
+            <a href="#" class="button">חקור את הדשבורד</a>
+            <a href="#" class="button">דו"ח שנתי מלא</a>
+            <a href="#" class="button">צור קשר עם צוות האנליטיקה</a>
         </div>
     </div>
 
     <div class="container">
-        <h2>הוויזואליזציה ב-Tableau</h2>
+        <h2>הוויזואליזציה האינטראקטיבית</h2>
         <iframe class="tableau-viz" src="https://public.tableau.com/views/FirstProject_17449030280760/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
     </div>
 
